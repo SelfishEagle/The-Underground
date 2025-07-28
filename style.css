@@ -1,0 +1,104 @@
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6; /* Improved readability */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.section-title {
+    font-size: 2.75rem; /* Slightly larger */
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 2.5rem; /* More spacing */
+    text-align: center;
+    letter-spacing: -0.05em; /* Tighter letter spacing for impact */
+}
+
+.card {
+    background-color: #2a2a2a;
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
+}
+
+.btn-primary {
+    background-color: #ef4444; /* Red-500 */
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem; /* rounded-lg */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex; /* For better icon alignment if added later */
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    background-color: #dc2626; /* Red-600 */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive iframe container */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    /* These padding-bottom values are calculated for the aspect ratios of your iframes */
+    /* For 450x316 player: (316 / 450) * 100% = 70.22% */
+    /* For 450x511 played: (511 / 450) * 100% = 113.55% */
+    padding-bottom: 70.22%; /* Default, overridden inline for played widget */
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.75rem; /* rounded-xl */
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.team-member-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ef4444;
+    margin: 0 auto 1rem;
+}
+
+/* Additional styling for table rows for alternating background */
+table tbody tr:nth-child(odd) {
+    background-color: #2a2a2a; /* Same as card background */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #3a3a3a; /* Slightly lighter dark for contrast */
+}
+
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+    z-index: 1000; /* Ensure it's above other content */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
